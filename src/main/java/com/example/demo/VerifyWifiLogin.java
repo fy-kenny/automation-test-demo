@@ -21,7 +21,7 @@ public class VerifyWifiLogin {
     public void wifiAutoLogin() throws IOException {
         chromeDriverExcutable();
 
-        WebDriver webDriver = new ChromeDriver();
+        WebDriver webDriver = new ChromeDriver(options());
 
         try {
             while (true) {
@@ -71,7 +71,7 @@ public class VerifyWifiLogin {
 //        options.addArguments("--headless");
 //        options.addArguments("--no-startup-window");
 //        options.addArguments("--disable-cache");
-//        options.addArguments("--window-position=-32000,-32000");
+        options.addArguments("--window-position=-32000,-32000");
         return options;
     }
 
